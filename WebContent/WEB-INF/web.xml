@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+	
+	
+	
+	<!-- 测试Cookie的Servlet -->
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.TestCookieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/testCookieServlet</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 显示商品列表及历史记录的Servlet -->
+	<servlet>
+		<servlet-name>productList</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.ProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productList</servlet-name>
+		<url-pattern>/plServlet</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 显示商品详细信息并保存历史记录的Servlet -->
+	<servlet>
+		<servlet-name>product</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>product</servlet-name>
+		<url-pattern>/pServlet</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 用户登录的Servlet -->
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 把数据写入Session的Servlet -->
+	<servlet>
+		<servlet-name>session</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.SessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>session</servlet-name>
+		<url-pattern>/sessionServlet</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 用户登录的Servlet -->
+	<servlet>
+		<servlet-name>ts1</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.TestSession1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts1</servlet-name>
+		<url-pattern>/ts1</url-pattern>	
+	</servlet-mapping>
+
+
+	<!-- 用户登录的Servlet -->
+	<servlet>
+		<servlet-name>ts2</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.TestSession2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts2</servlet-name>
+		<url-pattern>/ts2</url-pattern>	
+	</servlet-mapping>
+
+	<!-- 生成验证码的Servlet -->
+	<servlet>
+		<servlet-name>checkCode</servlet-name>
+		<servlet-class>cn.itcast.day16.servlet.CheckCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkCode</servlet-name>
+		<url-pattern>/checkCodeServlet</url-pattern>	
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
+</web-app>
